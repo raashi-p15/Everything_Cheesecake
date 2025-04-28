@@ -18,3 +18,5 @@ On the landing page, there are quicklinks in the header as well as the footer fo
 In the contact section, there are links for instagram and email to contact the shop.
 
 A ratings section needs to be added.
+
+
