@@ -1,0 +1,390 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Everything Cheesecake</title>
+	<link rel="stylesheet" href=
+"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+	<link rel="stylesheet" href="csscake.css">
+	<link rel="stylesheet" href="anothercss.css"> 
+</head>
+
+<body>
+	<header class="header">
+
+		<div class="logo1">
+			<img src="C:\Users\Raashi\OneDrive\Desktop\website\images and videos\logo.jpg" alt="Website Logo">
+		  </div>
+		<a href="file:///C:/Users/Raashi/OneDrive/Desktop/website/website.html" class="logo"> EVERYTHING CHEESECAKE </a>
+		<nav class="navbar">
+			<a href="file:///C:/Users/Raashi/OneDrive/Desktop/website/website.html">Home</a>
+			<a href="file:///C:/Users/Raashi/OneDrive/Desktop/website/website.html#shop"> Menu </a>
+			<a href="file:///C:/Users/Raashi/OneDrive/Desktop/website/website.html#about">About Us</a>
+			<a href="file:///C:/Users/Raashi/OneDrive/Desktop/website/website.html#contact">Contact Us</a>
+		</nav>
+		<div class="icons">
+			
+			<a href="mycart.html">
+				<div id="cart-btn" class="fas fa-shopping-cart"></div>
+			  </a>
+			
+				<div class="dropdown">
+					<button class="dropbtn">
+					  <i class="fas fa-user"></i>
+					</button>
+					<div class="dropdown-content">
+					  <a href="myaccount.html" target="_blank">My Account</a>
+					  <a href="myorders.html" target="_blank">My Orders</a>
+					  <a href="myaddresses.html" target="_blank">My Addresses</a>
+					  <a href="mywallet.html" target="_blank">My Wallet</a>
+					  <a href="#" onclick="confirmLogOut()">Log Out</a>
+					</div>
+					<!-- Error Popup -->
+  <div id="errorModal" class="modal">
+    <div class="modal-content">
+      <p>Are you sure you want to log out? This action cannot be undone.</p>
+      <button onclick="logOut()">Yes, Log Out</button>
+      <button onclick="closeModal()">Cancel</button>
+    </div>
+  </div>
+				  </div>
+			</div>
+		</div>
+		<div class="hamburger" id="hamburger">
+			<div class="line"></div>
+			<div class="line"></div>
+			<div class="line"></div>
+		</div>
+	</header>
+
+
+	<section class="home" id="home">
+		<div class="slides-container">
+			<div class="slide active">
+				<div class="content">
+					<span>Order Cheesecakes Online </span>
+					<h3>Upto 80% off</h3>
+					<a href="orderonline.html" class="btn">Buy Now</a>
+				</div>
+				<div class="img">
+					<img decoding="async"
+						src=
+"C:\Users\Raashi\OneDrive\Desktop\website\images and videos\float.jpg" alt="a picture of cheesecakes floating in the air">
+				</div>
+			</div>
+			<div class="slide">
+				<div class="content">
+					<span>Customize Ordering</span>
+					<h3>upto 80% off</h3>
+					<a href="orderonline.html" class="btn">Buy Now</a>
+				</div>
+				<div class="img">
+					<img decoding="async"
+						src=
+"C:\Users\Raashi\OneDrive\Desktop\website\images and videos\straw.jpg" alt="a picture of strawberry cheesecake">
+				</div>
+			</div>
+
+			<div class="slide">
+				<div class="content">
+					<span>Fast Delivery</span>
+					<h3>upto 80% off</h3>
+					<a href="orderonline.html" class="btn">Buy Now</a>
+				</div>
+				<div class="img">
+					<img decoding="async"
+						src=
+"C:\Users\Raashi\OneDrive\Desktop\website\images and videos\mango.jpg" alt="a picture of mango cheesecake">
+				</div>
+			</div>
+
+		</div>
+		<div id="next-slide" class="fas fa-angle-right" onclick="next()"></div>
+		<div id="prev-slide" class="fas fa-angle-left" onclick="next()"></div>
+	</section>
+
+	<div class="heading">
+		<h1>Cheesecake Shoppe</h1>
+	</div>
+
+
+	<section class="products" id="shop">
+
+		<h1 class="title"> our <span>products</span> <a href="#shop">view all >></a> </h1>
+
+		<div class="box-container">
+
+			<div class="box">
+				<div class="icons">
+					<a href="orderonline.html" class="fas fa-shopping-cart"></a>
+					<div class="para"><p>A creamy cheesecake topped with fresh, sweetened strawberries for a fruity, tangy twist</p> </div>
+				</div>
+				<div class="img">
+					<img decoding="async"
+						src=
+"C:\Users\Raashi\OneDrive\Desktop\website\images and videos\strawberry.jpg" alt="strawberry cheesecake">
+				</div>
+				<div class="content">
+					<h3>Strawberry Shortcake</h3>
+					<div class="price">$25</div>
+				</div>
+			</div>
+
+			<div class="box">
+				<div class="icons">
+					<a href="orderonline.html" class="fas fa-shopping-cart"></a>
+					<div class="para"><p>Rich and smooth cheesecake paired with a luscious blueberry topping for a burst of flavor</p></div>
+				</div>
+				<div class="img">
+					<img decoding="async"
+						src=
+"C:\Users\Raashi\OneDrive\Desktop\website\images and videos\blue.jpg" alt="blueberry cheesecake">
+				</div>
+				<div class="content">
+					<h3>Blushing Blueberry</h3>
+					<div class="price">$25</div>
+				</div>
+			</div>
+
+			<div class="box">
+				<div class="icons">
+					<a href="orderonline.html" class="fas fa-shopping-cart"></a>
+					<div class="para"><p>A timeless, velvety cheesecake with a buttery graham cracker crust and a rich, smooth filling</p></div>
+				</div>
+				<div class="img">
+					<img decoding="async"
+						src=
+"C:\Users\Raashi\OneDrive\Desktop\website\images and videos\simple.jpg" alt="classic cheesecake">
+				</div>
+				<div class="content">
+					<h3>Classic Fiesta</h3>
+					<div class="price">$20</div>
+				</div>
+			</div>
+
+			<div class="box">
+				<div class="icons">
+					<a href="orderonline.html" class="fas fa-shopping-cart"></a>
+					<div class="para"><p>A refreshing cheesecake with a zesty orange flavor, offering a citrusy sweetness</p></div>
+				</div>
+				<div class="img">
+					<img decoding="async"
+						src=
+"C:\Users\Raashi\OneDrive\Desktop\website\images and videos\orange.jpg" alt="orange cheesecake">
+				</div>
+				<div class="content">
+					<h3>Zesty Orange</h3>
+					<div class="price">$22</div>
+				</div>
+			</div>
+
+			<div class="box">
+				<div class="icons">
+					<a href="orderonline.html" class="fas fa-shopping-cart"></a>
+					<div class="para"><p>A decadent combination of rich red velvet cake and smooth, creamy cheesecake swirled together</p></div>
+				</div>
+				<div class="img">
+					<img decoding="async"
+						src=
+"C:\Users\Raashi\OneDrive\Desktop\website\images and videos\red.jpg" alt="red velvet cheesecake">
+				</div>
+				<div class="content">
+					<h3>Red Velvet</h3>
+					<div class="price">$27</div>
+				</div>
+			</div>
+
+			<div class="box">
+				<div class="icons">
+					<a href="orderonline.html" class="fas fa-shopping-cart"></a>
+					<div class="para"><p> A tropical, creamy cheesecake topped with a sweet and silky mango puree for a refreshing, fruity flavor</p></div>
+				</div>
+				<div class="img">
+					<img decoding="async"
+						src=
+"C:\Users\Raashi\OneDrive\Desktop\website\images and videos\mango.jpg" alt="mango cheesecake">
+				</div>
+				<div class="content">
+					<h3>Mango Madness</h3>
+					<div class="price">$30</div>
+				</div>
+			</div>
+
+			<div class="box">
+				<div class="icons">
+					<a href="orderonline.html" class="fas fa-shopping-cart"></a>
+					<div class="para"><p>A decadent, chocolate-infused cheesecake with a creamy, rich texture and deep cocoa flavor</p></div>
+				</div>
+				<div class="img">
+					<img decoding="async"
+						src=
+"C:\Users\Raashi\OneDrive\Desktop\website\images and videos\chocolate.jpg" alt="chocolate cheesecake">
+				</div>
+				<div class="content">
+					<h3>Chirpy Chocolate</h3>
+					<div class="price">$20</div>
+				</div>
+			</div>
+
+			<div class="box">
+				<div class="icons">
+					<a href="orderonline.html" class="fas fa-shopping-cart"></a>
+					<div class="para"><p>A deliciously tangy cheesecake topped with a vibrant raspberry layer, adding a sweet and tart balance</p></div>
+				</div>
+				<div class="img">
+					<img decoding="async"
+						src=
+"C:\Users\Raashi\OneDrive\Desktop\website\images and videos\raspberry.jpg" alt="raspberry cheesecake">
+				</div>
+				<div class="content">
+					<h3>Raspberry Ricotta</h3>
+					<div class="price">$40</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
+	<div class="heading">
+		<h1>About us</h1>
+	</div>
+
+	<section class="about" id="about">
+		<div class="img">
+			<img decoding="async"
+				src=
+"C:\Users\Raashi\OneDrive\Desktop\website\images and videos\cheesy.jpg" alt="everything cheesecake">
+		</div>
+
+		<div class=" content">
+			<h3>Our Story</h3>
+			<p>Welcome to Everything Cheesecake, where every slice tells 
+			a story of passion, creativity, and dedication. Born from the shared love of 
+			cheesecake and a deep commitment to crafting the perfect dessert, our shop is 
+			a celebration of the rich, velvety indulgence that is cheesecake. Our journey 
+			began with a team of seasoned bakers who wanted to elevate the classic cheesecake 
+			experience, creating not just a treat but a moment of joy with every bite.</p>
+			<p>At Everything Cheesecake, we believe that baking is more than just a craft; it's 
+				a labor of love. From selecting the finest, locally-sourced ingredients to perfecting 
+				every recipe with care and precision, our dedication to quality is evident in every 
+				cheesecake we create. Whether it's a classic New York-style cheesecake, a decadent chocolate 
+				delight, or a vibrant fruit-filled creation, each dessert is made with a passion for flavor 
+				and an eye for perfection.</p>
+			<p>Our talented team blends time-honored techniques with innovative flavors to bring you a range 
+				of cheesecakes that are as visually stunning as they are delicious. Every cake, slice, and 
+				bite is a reflection of our unwavering pursuit of excellence. Whether you're celebrating a 
+				special occasion or simply treating yourself to something sweet, Everything Cheesecake 
+				promises an experience that is both indulgent and memorable.</p>
+			<p>Join us at Everything Cheesecake, where every cheesecake is a work of art, and every bite is 
+				a taste of our commitment to creating sweet moments that last a lifetime.</p>
+		</div>
+	</section>
+
+
+	<div class="heading">
+		<h1>Contact us</h1>
+	</div>
+
+	<section class="contact" id="contact">
+		<div class="icons-container">
+
+			<div class="icons">
+				<i class="fas fa-phone"></i>
+				<h3>Contact number</h3>
+				<p>+91 8949878973</p>
+			</div>
+
+			<div class="icons">
+				<i class="fas fa-envelope"></i>
+				<h3>email</h3>
+				
+				<p> <p><a href="mailto:everythingcheesecake@gmail.com">everythingcheesecake@gmail.com</a></p> </p>
+			</div>
+
+			<div class="icons">
+				<i class="fas fa-map-marker-alt"></i>
+				<h3>address</h3>
+				<p><a href="https://maps.app.goo.gl/EJfEkNSm1E32RHfD8" target="_blank">Rope Walk Lane, Kala Ghoda, Mumbai</a></p>
+			</div>
+
+		</div>
+
+		<div class="row">
+			<form action="">
+				<h3>Order your custom cheesecake!</h3>
+				<div class="inputBox">
+					<input type="text"
+						placeholder="enter your name" class="box">
+					<input type="text"
+						placeholder="enter your email" class="box">
+				</div>
+				<div class="inputBox">
+					<input type="number"
+						placeholder="enter your number" class="box">
+					<input type="text"
+						placeholder="occasion" class="box">
+				</div>
+				<textarea placeholder=" custom cheesecake description" cols="30"
+						rows="10"></textarea>
+				<input type="submit" v
+					alue="send message" class="btn">
+			</form>
+		</div>
+
+	</section>
+
+	<div class="space"></div>
+
+	<section class="footer">
+		<div class="box-container">
+			<div class="box">
+				<h3>quick links</h3>
+				<a href="#"> <i class="fas 
+				fa-arrow-right"></i> Home</a>
+				<a href="file:///C:/Users/Raashi/OneDrive/Desktop/website/website.html#shop"> <i class="fas
+				fa-arrow-right"></i>Shop</a>
+				<a href="file:///C:/Users/Raashi/OneDrive/Desktop/website/website.html#about"> <i class="fas
+				fa-arrow-right"></i>About</a>
+				<a href="#"><span class="fa fa-star checked"></span>
+					<span class="fa fa-star checked"></span>
+					<span class="fa fa-star checked"></span>
+					<span class="fa fa-star"></span>
+					<span class="fa fa-star"></span> <i class="fas
+				fa-arrow-right"></i> Review</a>
+				<a href="file:///C:/Users/Raashi/OneDrive/Desktop/website/website.html#contact"> <i class="fas
+				fa-arrow-right"></i>Contact</a>
+			</div>
+
+			<div class="box">
+				<h3>follow us</h3>
+				<a href="https://www.instagram.com/everything.cheese.cake/" target="_blank"> <i class="fab 
+				fa-instagram"></i> instagram </a>
+				<p>OPENING HOURS: 10-11 AM</p>
+				
+			</div>
+
+			<div class="box">
+				<h3>newsletter</h3>
+				<p>Dont miss any Offer</p>
+				<form action="">
+					<input type="email" placeholder="your e-mail">
+					<input type="submit" value="subscribe" class="btn">
+				</form>
+			</div>
+		</div>
+	</section>
+
+	<section class="credit"> <span>© 2025 by Everything Cheesecake </span></section>
+
+	<script src="java.js" defer data-deferred="1"></script>
+	<script src="anotherjs.js" defer data-deferred="1"></script>
+</body>
+
+</html>

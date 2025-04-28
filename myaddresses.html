@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Addresses</title>
+  <link rel="stylesheet" href="anothercss.css">
+</head>
+<body>
+
+  <!-- Page Header -->
+  <header>
+    <h1>My Addresses</h1>
+  </header>
+
+  <!-- Saved Addresses Section -->
+  <section class="address-section">
+    <h2>Saved Addresses</h2>
+
+    <!-- Example Address #1 -->
+    <div class="address">
+      <div class="address-details">
+        <p><strong>Raashi Parashar</strong></p>
+        <p>Carter Road 4, Borivali (E)</p>
+        <p>Mumbai, Maharashtra</p>
+        <p>ZIP: 123456</p>
+        <p><strong>Phone:</strong> +91 8949878973</p>
+      </div>
+      <button class="edit-button">Edit</button>
+      <button class="delete-button">Delete</button>
+    </div>
+
+    <!-- Example Address #2 -->
+    <div class="address">
+      <div class="address-details">
+        <p><strong>Dhruv Sharma</strong></p>
+        <p>Charkop, Kandivali (E)</p>
+        <p>Mumbai, Maharashtra</p>
+        <p>ZIP: 75001</ps>
+        <p><strong>Phone:</strong> +91 9763218901</p>
+      </div>
+      <button class="edit-button">Edit</button>
+      <button class="delete-button">Delete</button>
+    </div>
+  </section>
+
+  <!-- Add New Address Button -->
+  <section class="add-new-address">
+    <button onclick="openAddAddressForm()" class="add-address-button">Add New Address</button>
+  </section>
+
+  <!-- Add New Address Form (hidden initially) -->
+  <section id="add-address-form" class="add-address-form">
+    <h2>Add New Address</h2>
+    <form action="#" method="POST">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required><br>
+
+      <label for="street">Street Address:</label>
+      <input type="text" id="street" name="street" required><br>
+
+      <label for="city">City:</label>
+      <input type="text" id="city" name="city" required><br>
+
+      <label for="zip">ZIP Code:</label>
+      <input type="text" id="zip" name="zip" required><br>
+
+      <label for="phone">Phone:</label>
+      <input type="tel" id="phone" name="phone" required><br>
+
+      <button type="submit">Save Address</button>
+      <button type="button" onclick="closeAddAddressForm()">Cancel</button>
+    </form>
+  </section>
+  <!-- Continue Browsing Section -->
+  <section class="continue-browsing">
+    <a href="website.html" class="continue-link">Continue Browsing</a>
+  </section>
+
+
+  <footer>
+    <p> © 2025 by Everything Cheesecake</p>
+  </footer>
+
+  <script src="anotherjs.js"></script>
+</body>
+</html>

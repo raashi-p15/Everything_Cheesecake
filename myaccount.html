@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Account</title>
+  <link rel="stylesheet" href="anothercss.css">
+</head>
+<body>
+
+  <div class="container">
+    <h2>My Account</h2>
+    
+    <!-- Personal Information Form -->
+    <div class="form-section">
+      <h3>Personal Information</h3>
+      <form id="accountForm">
+        <label for="firstName">First Name</label>
+        <input type="text" id="firstName" name="firstName" required>
+        
+        <label for="lastName">Last Name</label>
+        <input type="text" id="lastName" name="lastName" required>
+        
+        <label for="phoneNumber">Phone Number</label>
+        <input type="tel" id="phoneNumber" name="phoneNumber" required>
+        
+        <div class="buttons">
+          <button type="submit" class="update-btn">Update Info</button>
+          <button type="button" class="discard-btn" onclick="confirmDiscard()">Discard</button>
+        </div>
+      </form>
+    </div>
+    
+    <!-- Login Information -->
+    <div class="form-section">
+      <h3>Login Information</h3>
+      <p>Email: example@example.com</p>
+      <p>Password: ********</p>
+    </div>
+  </div>
+
+  <!-- Discard Confirmation Popup -->
+  <div id="discardModal" class="modal">
+    <div class="modal-content">
+      <p>Are you sure you want to discard your changes?</p>
+      <button onclick="discardChanges()">Yes, Discard</button>
+      <button onclick="closeModal()">No, Keep Editing</button>
+    </div>
+  </div>
+  <!-- Continue Browsing Section -->
+  <section class="continue-browsing">
+    <a href="website.html" class="continue-link">Continue Browsing</a>
+  </section>
+  <footer>
+    <p>&copy; © 2025 by Everything Cheesecake</p>
+  </footer>
+
+  <script src="anotherjs.js"></script>
+</body>
+</html>
+

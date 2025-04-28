@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Cart</title>
+  <link rel="stylesheet" href="anothercss.css">
+</head>
+<body>
+
+  <!-- Page Header -->
+  <header>
+    <h1>My Cart</h1>
+  </header>
+
+  <!-- Cart Items Section -->
+  <section id="cart-items" class="cart-items">
+    <h2>Your Cart</h2>
+
+    <!-- Item in Cart (Example) -->
+    <div class="cart-item">
+      <div class="cart-item-details">
+        <img src="C:\Users\Raashi\OneDrive\Desktop\website\images and videos\simple.jpg" alt="Item Image" class="cart-item-image">
+        <div class="item-info">
+          <p><strong>Classic Fiesta</strong></p>
+          <p>Quantity: <input type="number" class="quantity" value="1" min="1" onchange="updateTotal()"></p>
+          <p><strong>Price:</strong> $20.00</p>
+        </div>
+      </div>
+      <div class="cart-item-details">
+        <img src="C:\Users\Raashi\OneDrive\Desktop\website\images and videos\straw.jpg" alt="Item Image" class="cart-item-image">
+        <div class="item-info">
+          <p><strong>Strawberry Shortcake</strong></p>
+          <p>Quantity: <input type="number" class="quantity" value="1" min="1" onchange="updateTotal()"></p>
+          <p><strong>Price:</strong> $25.00</p>
+        </div>
+      </div>
+      <div class="note-section">
+        <label for="note">Add a note:</label>
+        <textarea id="note" class="note-description" placeholder="Enter note here..." oninput="updateTotal()"></textarea>
+      </div>
+      <button class="remove-item-button" onclick="removeItem(this)">Remove</button>
+    </div>
+
+    <!-- Empty Cart Message -->
+    <div>
+      <a href="website.html" class="continue-browsing">Continue Browsing</a>
+    </div>
+
+    <!-- Cart Total Section -->
+    <div class="cart-total">
+      <p><strong>Total:</strong> $45.00</p>
+      <input type="text" id="promo-code" placeholder="Enter Promo Code" oninput="applyPromoCode()">
+      <button class="checkout-button" onclick="checkout()">Checkout</button>
+    </div>
+  </section>
+  
+
+  <footer>
+    <p>&copy; © 2025 by Everything Cheesecake</p>
+  </footer>
+  
+
+  <script src="anotherjs.js"></script>
+</body>
+</html>

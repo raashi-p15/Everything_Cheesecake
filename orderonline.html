@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Online</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: antiquewhite;
+        }
+        .order-options, .menu, .cart {
+            margin-bottom: 20px;
+        }
+        .order-options select, .order-options input {
+            padding: 8px;
+            margin: 5px 0;
+        }
+        .menu-item {
+            display: flex;
+            align-items: center;
+            margin: 15px 0;
+        }
+        .menu-item img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            margin-right: 15px;
+        }
+        .menu-item h3 {
+            margin: 0;
+        }
+        .menu-item p {
+            font-size: 14px;
+            color: gray;
+        }
+        .menu-item .price {
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        .menu-item .quantity {
+            margin: 0 10px;
+        }
+        .cart {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        .cart-dropdown {
+            position: absolute;
+            top: 40px;
+            right: 20px;
+            background-color: rgb(193, 128, 128);
+            border: 1px solid #ccc;
+            padding: 15px;
+            width: 200px;
+            display: none;
+        }
+        .cart-dropdown ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        .cart-dropdown li {
+            margin: 10px 0;
+        }
+        .cart-dropdown button {
+            padding: 10px;
+            background-color: rgb(67, 31, 67);
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Pick-up/Delivery Option -->
+    <div class="order-options">
+        <label for="delivery-option">Choose Delivery or Pick-up</label>
+        <select id="delivery-option">
+            <option value="pickup">Pick-up</option>
+            <option value="delivery">Delivery</option>
+        </select>
+
+        <!-- Pick-up Time -->
+        <div id="pickup-time" class="pickup-time">
+            <label for="pickup-time">Pick-up Time</label>
+            <input type="datetime-local" id="pickup-time">
+        </div>
+
+        <!-- Delivery Address -->
+        <div id="delivery-address" class="delivery-address">
+            <label for="address">Enter Delivery Address</label>
+            <input type="text" id="address" placeholder="Enter your address">
+        </div>
+    </div>
+
+    <!-- Menu Section -->
+    <div class="menu">
+        <h2>Menu</h2>
+        <!-- Example Menu Items -->
+        <div class="menu-item" data-item="1">
+            <img src="C:\Users\Raashi\OneDrive\Desktop\website\images and videos\simple.jpg" alt="Item 1">
+            <div>
+                <h3>Classic Fiesta</h3>
+                <p>A timeless, velvety cheesecake with a buttery graham cracker crust and a rich, smooth filling</p>
+                <span class="price">$20</span>
+                <input type="number" class="quantity" min="1" value="1">
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+        <div class="menu-item" data-item="2">
+            <img src="C:\Users\Raashi\OneDrive\Desktop\website\images and videos\straw.jpg" alt="Item 2">
+            <div>
+                <h3>Strawberry Shortcake</h3>
+                <p>A creamy cheesecake topped with fresh, sweetened strawberries for a fruity, tangy twist</p>
+                <span class="price">$25.00</span>
+                <input type="number" class="quantity" min="1" value="1">
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+        <div class="menu-item" data-item="3">
+            <img src="C:\Users\Raashi\OneDrive\Desktop\website\images and videos\chocolate.jpg" alt="Item 3">
+            <div>
+                <h3>Chirpy Chocolate</h3>
+                <p>A decadent, chocolate-infused cheesecake with a creamy, rich texture and deep cocoa flavor</p>
+                <span class="price">$20</span>
+                <input type="number" class="quantity" min="1" value="1">
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+        <div class="menu-item" data-item="4">
+            <img src="C:\Users\Raashi\OneDrive\Desktop\website\images and videos\mango.jpg" alt="Item 4">
+            <div>
+                <h3>Mango Madness</h3>
+                <p>A tropical, creamy cheesecake topped with a sweet and silky mango puree for a refreshing, fruity flavor</p>
+                <span class="price">$30</span>
+                <input type="number" class="quantity" min="1" value="1">
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+        <div class="menu-item" data-item="5">
+            <img src="C:\Users\Raashi\OneDrive\Desktop\website\images and videos\orange.jpg" alt="Item 5">
+            <div>
+                <h3>Zesty Orange</h3>
+                <p>A refreshing cheesecake with a zesty orange flavor, offering a citrusy sweetness</p>
+                <span class="price">$22</span>
+                <input type="number" class="quantity" min="1" value="1">
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+        <div class="menu-item" data-item="6">
+            <img src="C:\Users\Raashi\OneDrive\Desktop\website\images and videos\raspberry.jpg" alt="Item 6">
+            <div>
+                <h3>Raspberry Ricotta</h3>
+                <p>A deliciously tangy cheesecake topped with a vibrant raspberry layer, adding a sweet and tart balance</p>
+                <span class="price">$40</span>
+                <input type="number" class="quantity" min="1" value="1">
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+        <div class="menu-item" data-item="7">
+            <img src="C:\Users\Raashi\OneDrive\Desktop\website\images and videos\red.jpg" alt="Item 7">
+            <div>
+                <h3>Red Velvet</h3>
+                <p>A decadent combination of rich red velvet cake and smooth, creamy cheesecake swirled together</p>
+                <span class="price">$27</span>
+                <input type="number" class="quantity" min="1" value="1">
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+        <div class="menu-item" data-item="8">
+            <img src="C:\Users\Raashi\OneDrive\Desktop\website\images and videos\blue.jpg" alt="Item 8">
+            <div>
+                <h3>Blushing Blueberry</h3>
+                <p>Rich and smooth cheesecake paired with a luscious blueberry topping for a burst of flavor</p>
+                <span class="price">$25</span>
+                <input type="number" class="quantity" min="1" value="1">
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+
+    <!-- Cart Icon -->
+    <div class="cart">
+        <i class="fas fa-cart-plus"></i>
+    </div>
+
+    <!-- Cart Dropdown -->
+    <div class="cart-dropdown">
+        <ul id="cart-list">
+            <!-- Cart items will appear here -->
+        </ul>
+        <button id="mycart">Cart</button>
+    </div>
+
+    <script>
+        // Initialize Cart
+        const cart = [];
+
+        // Add item to cart
+        function addToCart(itemName, itemPrice, quantity) {
+            const item = { name: itemName, price: itemPrice, quantity: quantity };
+            cart.push(item);
+            updateCartDropdown();
+        }
+
+        // Update the cart dropdown
+        function updateCartDropdown() {
+            const cartList = document.getElementById("cart-list");
+            cartList.innerHTML = ""; // Clear previous cart items
+            let total = 0;
+            cart.forEach(item => {
+                const listItem = document.createElement("li");
+                listItem.textContent = `${item.name} x ${item.quantity} - $${(item.price * item.quantity).toFixed(2)}`;
+                cartList.appendChild(listItem);
+                total += item.price * item.quantity;
+            });
+            const totalPrice = document.createElement("li");
+            totalPrice.textContent = `Total: $${total.toFixed(2)}`;
+            cartList.appendChild(totalPrice);
+        }
+
+        // Handle Cart Icon Click
+        document.querySelector(".cart").addEventListener("click", function () {
+            const cartDropdown = document.querySelector(".cart-dropdown");
+            cartDropdown.style.display = cartDropdown.style.display === "block" ? "none" : "block";
+        });
+
+        // Handle Add to Cart Button Click
+        const addToCartButtons = document.querySelectorAll(".add-to-cart");
+        addToCartButtons.forEach(button => {
+            button.addEventListener("click", function () {
+                const menuItem = button.closest(".menu-item");
+                const itemName = menuItem.querySelector("h3").textContent;
+                const itemPrice = parseFloat(menuItem.querySelector(".price").textContent.replace('$', ''));
+                const quantity = parseInt(menuItem.querySelector(".quantity").value);
+                addToCart(itemName, itemPrice, quantity);
+            });
+        });
+
+        // Handle Checkout
+        document.getElementById("mycart").addEventListener("click", function() {
+            // Redirect to another page (replace 'anotherpage.html' with the actual page URL)
+            window.location.href = 'mycart.html';
+        });
+
+    </script>
+
+</body>
+</html>
