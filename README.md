@@ -1,4 +1,4 @@
-# web1
+# Everything Cheesecake
 FRONT END WEB DEVELOPMENT PROJECT 1
 
 
