@@ -1,5 +1,8 @@
 # web1
-web development project 1
+FRONT END WEB DEVELOPMENT PROJECT 1
+
+
+
 I built this website as an assignment for my web development class. It was built with the help of a GeeksForGeeks tutorial on how to make a cake shop website. I've added many more elements onwards.
 
 Being an online cheesecake shop website, it possesses several elements including a landing page, with a menu section, an about section, a custom order section and a contact section. Other than the landing page, we have a profile page called My Account containing account information, My Orders containing past and current orders information, My Addresses with user's saved addresses and My Wallet with the user's payment options.
